@@ -54,7 +54,7 @@ print('\n Stacking along Height (depth): ')
 
 arrJoined = np.dstack((arr1, arr1_2))
 
-print(arrJoined)import numpy as np
+print(arrJoined)
 
 arr0 = np.array(42)                     # 0D - array
 arr1 = np.array([1,3,5,7,9,11,13,15])   # 1D - array
