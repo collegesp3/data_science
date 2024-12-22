@@ -30,6 +30,19 @@ print('dict3 dict zip :', dict3)
 dict4= {x : x**2 for x in range(10)}
 print('dict4 comprehens. :', dict4)
 
+# ---------------------------------------
+
+list11 = ['one', 'two', 'one', 'three']
+list22 = [11, 22, 33, 34]
+
+dict31 = dict(zip(list11, list22))
+
+print('dict3 dict zip from lists :\n',
+list11, '\n', list22, '\n', dict31)
+
+# ---------------------------------------
+
+
 
 # ------------- The end -----------------
 print('\n', ' e n d '.center(60, '-'),'\n')
