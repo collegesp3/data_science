@@ -27,11 +27,27 @@ lst_iter = iter(lst)
 for l in lst:
     print(lst_iter.__next__(), end='.')
 
-""" print('lst_iter.__next__ :', lst_iter.__next__())
-print('lst_iter.__next__ :', lst_iter.__next__())
-print('lst_iter.__next__ :', lst_iter.__next__()) """
+# ------------ using list comprehensions on files ------------
 
+f_name = 'python.core/tmp/carlsson.txt'
 
+f = open(f_name, encoding="utf-8")
+print('\n\n------ using list comprehensions on files :\n', 
+      f.readlines())
+
+#  ------- cut the "\n" : ----------
+
+print('\n------ cut the "\\n"  :\n', 
+      [line.rstrip() for line in open(f_name, encoding="utf-8")]) 
+
+#  ------- other operations : ----------
+import re
+
+print('\n Карлсон ?  :\n', 
+      [('Карлсон' in line, re.sub('Карлсон', 'Carlsson', line))
+         for line in open(f_name, encoding="utf-8")]) 
+
+#print(re.sub('python','ANACONDA', f_name))
 
 # ------------- The end -----------------
-print('\n', ' e n d '.center(60, '-'),'\n')
+print('\n', ' T h e  e n d '.center(60, '-'),'\n')
