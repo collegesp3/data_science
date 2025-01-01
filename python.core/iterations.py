@@ -47,7 +47,30 @@ print('\n Карлсон ?  :\n',
       [('Карлсон' in line, re.sub('Карлсон', 'Carlsson', line))
          for line in open(f_name, encoding="utf-8")]) 
 
-#print(re.sub('python','ANACONDA', f_name))
+#  -------if clause : ----------
+
+print('\n strings with "Карлсон" only  :\n', 
+      [ line.rstrip()
+        for line in open(f_name, encoding="utf-8")
+        if 'Карлсон' in line
+      ]) 
+
+
+#  -------nested "for" : ----------
+
+s1 = 'abc'
+s2 = '123'
+
+print('\n all combinations :\n', 
+      [ x + y for x in s1 for y in s2]) 
+
+print('\n unique combinations :\n', 
+      [ x + y for x in s1 
+        for y in s1 
+        if x != y
+      ]) 
+
+
 
 # ------------- The end -----------------
 print('\n', ' T h e  e n d '.center(60, '-'),'\n')
